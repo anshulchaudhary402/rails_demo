@@ -1,0 +1,24 @@
+
+<div class="col-lg-12">
+	<div class="card rounded-0 mt-5 mb-5">
+		<div class="card-body">
+			<h2 class="text-center"><i> Documents Details</i></h2>
+		</div>
+	</div>
+		<h3 class="text-center"><i> Documents Personal Information</i></h3>
+			<div class="row">
+				<div class="col-lg-6">
+					<% if @document.image.attached? %>
+						<%= image_tag @document.image %>
+					<% end %>
+					<i><p class="lead"><strong>Name:</strong> <%= @document.name %></p></i>
+					<i><p class="lead"><strong>Doc type:</strong> <%= @document.doc_type %></p></i>
+					<i><p class="lead"><strong>Emp Doc name:</strong> <%= @document.employee.name %></p></i>
+				</div>
+			</div>
+			<%= link_to 'Back to Document',documents_path, class: 'btn btn-outline-primary btn-lg rounded-0' %>
+			
+			<%= link_to 'Edit to Document',edit_document_path(@document), class: 'btn btn-primary btn-lg rounded-0' %>
+		</div>
+	
+</div>	
